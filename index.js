@@ -11,6 +11,10 @@ app.get('/home' , (req , res)=>{
     res.render('e-commerce/home')
 })
 
+app.get('/signup' , (req , res)=>{
+    res.render('e-commerce/signup')
+})
+
 const port = 5050
 app.listen(5050 , () => {
     console.log(`Listening on Port No. ${port}`)

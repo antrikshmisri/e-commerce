@@ -4,14 +4,43 @@ body
     height: 100vh;
     font-family: 'Nunito', sans-serif;
 }
-
+.main-container
+{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .signup-form{
-  width: 300px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  width: 500px;
+  background-color: #343f3e;
   padding: 20px;
   margin: 8% auto 0;
   text-align:center;
-
+  color: #dcedff;
+  border-radius: 20px;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  filter: drop-shadow(0px 0px 10px  rgba(52, 63, 62,0.8));
+}
+.signup-form h1
+{
+    font-weight: 700;
+}
+.input input
+{
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #343f3e;
+    border-radius: 15px;
+    width: 70%;
+    margin: 0.8rem 0rem;
+    padding: 0.2rem 0.5rem;
 }
 .navbar
 {
@@ -90,7 +119,7 @@ body
     outline: none;
     border: none;
     border-bottom: 5px solid rgba(220, 237, 255,0);
-    filter: drop-shadow(2px 2px 10px  #343f3e);
+    filter: drop-shadow(0px 0px 5px  rgba(52, 63, 62,0.5));
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 2rem;
