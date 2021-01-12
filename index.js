@@ -14,6 +14,9 @@ app.get('/home' , (req , res)=>{
 app.get('/signup' , (req , res)=>{
     res.render('e-commerce/signup')
 })
+app.get('/signin' , (req , res)=>{
+    res.render('e-commerce/signin')
+})
 
 const port = 5050
 app.listen(5050 , () => {
