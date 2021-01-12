@@ -5,17 +5,25 @@ body
     font-family: 'Nunito', sans-serif;
 }
 
+.signup-form{
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align:center;
+
+}
 .navbar
 {
     text-transform: uppercase;
-    background-color: #343f3e !important;    
+    background-color: #343f3e !important;
 }
 .navbar-nav
 {
 
     width: 30%;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 .navbar .nav-link,.navbar-brand
 {
