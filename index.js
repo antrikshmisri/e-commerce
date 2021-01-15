@@ -3,6 +3,7 @@ const path = require('path')
 const app = express()
 const mongoose = require('mongoose')
 const Product = require('./models/products')
+// added a comment
 mongoose.connect('mongodb://localhost:27017/e-products',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
