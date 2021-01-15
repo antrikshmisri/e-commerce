@@ -33,7 +33,13 @@ app.get('/signin' , (req , res)=>{
 
 app.get('/products' , async (req , res)=>{
     const allproducts = await Product.find({})
-    res.render('e-commerce/products' , {allproducts})
+    res.render('e-commerce/products/products' , {allproducts})
+})
+
+app.get('/products/:id/show' , async (req , res)=>{
+    const {id} = req.params
+    const foundproduct = await Product.findById(id)
+    res.render('e-commerce/products/show' , {foundproduct})
 })
 
 const port = 5050

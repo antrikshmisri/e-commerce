@@ -1,0 +1,9 @@
+<%- include('../../partials/header') %>
+<div class="container">
+    <ul>
+        <% for(let product of allproducts) {%>
+        <li><a href="/products/<%= product._id %>/show"><%= product.title %> </a></li> 
+        <% } %>  
+    </ul>
+</div>
+<%- include('../../partials/footer') %>

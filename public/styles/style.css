@@ -131,3 +131,24 @@ body
     border-bottom: 5px solid #343f3e;
     border-radius: 20px;
 }
+.product-div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.category
+{
+    border-radius: 20px;
+    background-color: #343f3e;
+    color: #dcedff; 
+    min-height: 50px;
+    max-width: 20%;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 5px  rgba(52, 63, 62,0.5));
+}

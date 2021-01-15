@@ -1,0 +1,12 @@
+<%- include('../../partials/header') %>
+<div class="container text-center product-div">
+    <h1 class="my-3"><%= foundproduct.title %></h1>
+    <div class="category my-3">
+        <span class="mx-3 text-center">
+                <%= foundproduct.category %> 
+        </span>
+    </div>
+    <h3 class="my-3"><b>$<%= foundproduct.price %> </b></h3>
+    <p class="lead my-3"><%= foundproduct.description %> </p>
+</div>
+<%- include('../../partials/footer') %>
