@@ -1,9 +1,57 @@
 <%- include('../../partials/header') %>
+<!-- <div class="container"> -->
+  <!-- <ul> -->
+
+  <% for(let product of allproducts) {%>
+
 <div class="container">
-    <ul>
-        <% for(let product of allproducts) {%>
-        <li><a href="/products/<%= product._id %>/show"><%= product.title %> </a></li> 
-        <% } %>  
-    </ul>
+  <!-- <div style="float: left;width: calc(100%/2);background:red">left</div> -->
+  <!-- <div style="float: left;width: calc(100%/3);background:pink">center</div> -->
+
+  <div class="card">
+    <div class="images" style="float: left;width: calc(100%/2);">
+
+      <div class="slider"></div>
+      <div class="img-slider">
+        <div class="imgs"></div>
+        <div class="imgs"></div>
+        <div class="imgs"></div>
+      </div>
+      </div>
+      <div class="infos" style="float: left;width: calc(100%/2);">
+      <h1><a href="/products/<%= product._id %>/show"><%= product.title %> </a></h1>
+      <div class="reviews">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+      </div>
+      <div class="price">
+        <h3><a href="/products/<%= product._id %>/show"><%= product.price %> </a>$</h3>
+      </div>
+      <div class="more-infos">
+        <h5>Description</h5>
+      </div>
+      <div class="info-content">
+
+      </div>
+      <div class="buttons">
+        <button type="button" name="button"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
+        <button type="button" name="button">Buy Now</button>
+      </div>
+      </div>
+
+
+
+
+  </div>
+
 </div>
+
+
+  <% } %>
+  <!-- </ul>  -->
+<!-- </div> -->
+
 <%- include('../../partials/footer') %>

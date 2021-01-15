@@ -3,7 +3,31 @@ body
     background-color: #dcedff;
     height: 100vh;
     font-family: 'Lato', sans-serif;
+
 }
+
+.container{
+  width: 80vw;
+  height: 90vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  background-color: #94b0da ;
+  width: 80%;
+  height: 70%;
+  border-radius: 8px;
+  display: flex;
+
+}
+/* .card .images,
+.card .infos{
+  width: 50%
+} */
 .main-container
 {
     position: absolute;
@@ -142,7 +166,7 @@ body
 {
     border-radius: 20px;
     background-color: #343f3e;
-    color: #dcedff; 
+    color: #dcedff;
     min-height: 50px;
     max-width: 20%;
     text-transform: uppercase;
