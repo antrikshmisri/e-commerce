@@ -1,57 +1,65 @@
 <%- include('../../partials/header') %>
-<!-- <div class="container"> -->
-  <!-- <ul> -->
 
-  <% for(let product of allproducts) {%>
-
-<div class="container">
-  <!-- <div style="float: left;width: calc(100%/2);background:red">left</div> -->
-  <!-- <div style="float: left;width: calc(100%/3);background:pink">center</div> -->
-
-  <div class="card">
-    <div class="images" style="float: left;width: calc(100%/2);">
-
-      <div class="slider"></div>
-      <div class="img-slider">
-        <div class="imgs"></div>
-        <div class="imgs"></div>
-        <div class="imgs"></div>
-      </div>
-      </div>
-      <div class="infos" style="float: left;width: calc(100%/2);">
-      <h1><a href="/products/<%= product._id %>/show"><%= product.title %> </a></h1>
-      <div class="reviews">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-      </div>
-      <div class="price">
-        <h3><a href="/products/<%= product._id %>/show"><%= product.price %> </a>$</h3>
-      </div>
-      <div class="more-infos">
-        <h5>Description</h5>
-      </div>
-      <div class="info-content">
-
-      </div>
-      <div class="buttons">
-        <button type="button" name="button"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
-        <button type="button" name="button">Buy Now</button>
-      </div>
-      </div>
-
-
-
-
-  </div>
-
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h3 class="sidenav-title text-center">CATEGORIES</h3>
+  <% for(cat of uniqecat){%>
+  <a class="my-4" href="#"><%= cat %> </a>
+  <% } %>
 </div>
 
+<div class="menu-btn" onclick="openNav()">
+  <i class="fa fa-arrow-right fa-2x"></i>
+</div>
+<% for(let product of allproducts) {%>
 
-  <% } %>
-  <!-- </ul>  -->
-<!-- </div> -->
+<div class="card-container container">
+  <div class="card mx-0 px-0">
+    <div class="container-fluid">
+      <div class="row" style="height: 100%">
+        <div class="col-lg-6 mx-0 px-0">
+          <div class="image">
+            <img
+              class="img-thumbnail img-fluid"
+              src="https://images.unsplash.com/photo-1519669011783-4eaa95fa1b7d"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 mx-0 px-3 py-3">
+          <div class="infos">
+            <h1 class="">
+              <a href="/products/<%= product._id %>/show"
+                ><%= product.title %>
+              </a>
+            </h1>
+            <div class="reviews">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <div class="price">
+              <h3>$<%= product.price %></h3>
+            </div>
+            <div class="more-infos">
+              <h5>
+                <a href="/products/<%= product._id %>/show">Description </a>
+              </h5>
+            </div>
+            <div class="info-content"></div>
+            <div class="buttons">
+              <button type="button" name="button">
+                <i class="fa fa-shopping-cart"></i>Add to Cart
+              </button>
+              <button type="button" name="button">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%- include('../../partials/footer') %>
+<% } %> <%- include('../../partials/footer') %>

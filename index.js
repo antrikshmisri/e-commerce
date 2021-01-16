@@ -18,6 +18,7 @@ db.once("open" , ()=>{
 
 app.use(express.static(__dirname + '/public'));
 app.use('/styles', express.static(__dirname + '/public'));
+app.use('/js', express.static(__dirname + '/public'));
 app.set('views' , path.join(__dirname , 'views'))
 app.set('view engine' , 'ejs')
 
@@ -34,7 +35,14 @@ app.get('/signin' , (req , res)=>{
 
 app.get('/products' , async (req , res)=>{
     const allproducts = await Product.find({})
-    res.render('e-commerce/products/products' , {allproducts})
+    let categories = await Product.find({}).select('category -_id')
+    let uniqecat = []
+    for(let category of categories)
+    {
+        uniqecat.push(category.category)
+    }
+    uniqecat = [...new Set(uniqecat)]
+    res.render('e-commerce/products/products' , {allproducts,uniqecat})
 })
 
 app.get('/products/:id/show' , async (req , res)=>{
