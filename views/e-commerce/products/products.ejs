@@ -1,26 +1,29 @@
 <%- include('../../partials/header') %>
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h3 class="sidenav-title text-center">CATEGORIES</h3>
-    <% for(cat of uniqecat){%>
-      <a class="my-4" href="#"><%= cat %> </a> 
-    <% } %> 
-  </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h3 class="sidenav-title text-center">CATEGORIES</h3>
+  <% for(cat of uniqecat){%>
+  <a class="my-4" href="#"><%= cat %> </a>
+  <% } %>
+</div>
 
-  <div class="menu-btn" onclick="openNav()"><i class="fa fa-arrow-right fa-2x"></i></div>
+<div class="menu-btn" onclick="openNav()">
+  <i class="fa fa-arrow-right fa-2x"></i>
+</div>
 <% for(let product of allproducts) {%>
 
 <div class="card-container container">
-
-
   <div class="card mx-0 px-0">
-
     <div class="container-fluid">
       <div class="row" style="height: 100%">
         <div class="col-lg-6 mx-0 px-0">
           <div class="image">
-            <img class="img-thumbnail img-fluid" src="https://images.unsplash.com/photo-1519669011783-4eaa95fa1b7d" alt="">
+            <img
+              class="img-thumbnail img-fluid"
+              src="https://images.unsplash.com/photo-1519669011783-4eaa95fa1b7d"
+              alt=""
+            />
           </div>
         </div>
         <div class="col-lg-6 mx-0 px-3 py-3">
@@ -41,9 +44,9 @@
               <h3>$<%= product.price %></h3>
             </div>
             <div class="more-infos">
-              <h5><a href="/products/<%= product._id %>/show"
-                >Description
-              </a></h5>
+              <h5>
+                <a href="/products/<%= product._id %>/show">Description </a>
+              </h5>
             </div>
             <div class="info-content"></div>
             <div class="buttons">
@@ -55,13 +58,8 @@
           </div>
         </div>
       </div>
-
     </div>
-    
   </div>
 </div>
 
-<% } %>
-
-
-<%- include('../../partials/footer') %>
+<% } %> <%- include('../../partials/footer') %>
