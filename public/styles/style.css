@@ -5,6 +5,10 @@ body
     font-family: 'Lato', sans-serif;
 
 }
+.navbar-toggler-icon {
+    background-color: #dcedff;
+    border-radius: 50%;
+}
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -44,34 +48,63 @@ body
     font-size: 36px;
     margin-left: 50px;
   }
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#343f3e;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  } 
+  
   .menu-btn {
+      transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+      background-color: #343f3e;
     display: block;
     margin: 1em;
-    position: absolute;
-    width: 36px; 
-    cursor: pointer; 
+    position: fixed;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #dcedff;
   }
-  
-  .menu-btn:before,
-  .menu-btn:after {
-    background-color: #343f3e;
-    content: '';
-    display: block;
-    height: 4px;
-    transition: all 200ms ease-in-out;
+  .menu-btn:hover
+  {
+      filter: drop-shadow(0px 0px 10px #94b0da);
+      transform: rotateZ(360deg);
   }
-  .menu-btn:before {
-    box-shadow: 0 10px 0 #343f3e;
-    margin-bottom: 16px;
-  }
-  .menu-btn:hover:before {
-    box-shadow: 0 0 0 #343f3e;
-    transform: translateY(10px) rotate(45deg);
-  }
-  .menu-btn:hover:after{
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  
+
 .card-container{
 
   height: 90vh;
@@ -293,5 +326,10 @@ button:hover
     .card .image
     {
         display: none;
+    }
+    .menu-btn
+    {
+        top: 12.5%;
+        z-index: 3;
     }
 }
