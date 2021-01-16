@@ -7,6 +7,11 @@ body {
   background-color: #dcedff;
   border-radius: 50%;
 }
+#mySidenav
+{
+  width:250px !important;
+  transform: translateX(-100%);
+}
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
@@ -81,7 +86,7 @@ body {
 }
 
 .menu-btn {
-  transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1) , filter 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
   background-color: #343f3e;
   display: block;
   margin: 1em;
@@ -95,10 +100,12 @@ body {
   align-items: center;
   border-radius: 50%;
   color: #dcedff;
+  z-index: 3;
+  left: 0%;
+  transform: rotateZ(0deg);
 }
 .menu-btn:hover {
-  filter: drop-shadow(0px 0px 10px #94b0da);
-  transform: rotateZ(360deg);
+  filter: drop-shadow(0px 0px 10px #343f3e);
 }
 
 .card-container {
@@ -298,7 +305,7 @@ button:hover {
     display: none;
   }
   .menu-btn {
-    top: 12.5%;
+    top: 50%;
     z-index: 3;
   }
 }
