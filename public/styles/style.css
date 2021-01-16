@@ -11,7 +11,7 @@ body
   height: 90vh;
   border-radius: 20px;
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   align-items: center;
   justify-content: center;
 }
