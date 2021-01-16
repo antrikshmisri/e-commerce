@@ -5,7 +5,73 @@ body
     font-family: 'Lato', sans-serif;
 
 }
-
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #343f3e; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+  }
+  .sidenav .sidenav-title
+  {
+      font-weight: 700;
+      color: #dcedff;
+  }
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    display: block;
+    color: #94b0da;
+    text-transform: uppercase;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #dcedff;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .menu-btn {
+    display: block;
+    margin: 1em;
+    position: absolute;
+    width: 36px; 
+    cursor: pointer; 
+  }
+  
+  .menu-btn:before,
+  .menu-btn:after {
+    background-color: #343f3e;
+    content: '';
+    display: block;
+    height: 4px;
+    transition: all 200ms ease-in-out;
+  }
+  .menu-btn:before {
+    box-shadow: 0 10px 0 #343f3e;
+    margin-bottom: 16px;
+  }
+  .menu-btn:hover:before {
+    box-shadow: 0 0 0 #343f3e;
+    transform: translateY(10px) rotate(45deg);
+  }
+  .menu-btn:hover:after{
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
 .card-container{
 
   height: 90vh;
