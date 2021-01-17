@@ -29,7 +29,8 @@ getProducts()
             title: product.title,
             price: product.price,
             description: product.description,
-            category: product.category
+            category: product.category,
+            image: product.image
         }).then(res =>{
             console.log(res)
         })
