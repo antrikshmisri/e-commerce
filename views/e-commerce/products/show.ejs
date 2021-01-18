@@ -1,12 +1,70 @@
 <%- include('../../partials/header') %>
-<div class="container text-center product-div">
+<div class=" show-page mx-0 px-0">
+  <div class="container-fluid">
+    <div class="row" style="height: 100%;">
+      <div class="col-lg-6 mx-0 px-0" >
+        <div class="image">
+          <img
+            loading="lazy"
+            class="img-fluid"
+            src=<%= foundproduct.image %>
+            alt=<%= foundproduct.title %>
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 mx-0 px-3 py-3">
+        <div class="infos">
+          <h1 class="">
+            <a href="/products/<%= foundproduct._id %>/show">
+              <%= foundproduct.title %>
+
+            </a>
+
+          </h1>
+          <div class="reviews">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="price">
+            <h3>$<%= foundproduct.price %></h3>
+          </div>
+          <div class="more-infos">
+            <h4>
+              Category :-
+              <span class="mx-3 text-center">
+                      <%= foundproduct.category %>
+              </span>
+            </h4>
+
+            <h5>
+              <a href="/products/<%= foundproduct._id %>/show">Product Details</a>
+            </h5>
+            <p class="lead my-3"><%= foundproduct.description %> </p>
+          </div>
+          <div class="info-content"></div>
+          <div class="buttons">
+            <button type="button" name="button">
+              <i class="fa fa-shopping-cart"></i>Add to Cart
+            </button>
+            <button type="button" name="button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container text-center product-div">
+  hi
     <h1 class="my-3"><%= foundproduct.title %></h1>
     <div class="category my-3">
         <span class="mx-3 text-center">
-                <%= foundproduct.category %> 
+                <%= foundproduct.category %>
         </span>
     </div>
     <h3 class="my-3"><b>$<%= foundproduct.price %> </b></h3>
     <p class="lead my-3"><%= foundproduct.description %> </p>
-</div>
+</div> -->
 <%- include('../../partials/footer') %>
