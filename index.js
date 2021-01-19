@@ -16,12 +16,12 @@ db.once("open" , ()=>{
     console.log("connection established")
 })
 
+
 app.use(express.static(__dirname + '/public'));
 app.use('/styles', express.static(__dirname + '/public'));
 app.use('/js', express.static(__dirname + '/public'));
 app.set('views' , path.join(__dirname , 'views'))
 app.set('view engine' , 'ejs')
-
 app.get('/home' , (req , res)=>{
     res.render('e-commerce/home')
 })
@@ -45,7 +45,8 @@ app.get('/products' , async (req , res)=>{
     res.render('e-commerce/products/products' , {allproducts,uniqecat})
 })
 
-app.get('/products/:id/show' , async (req , res)=>{
+
+app.get('/products/:id' , async (req , res)=>{
     const {id} = req.params
     const foundproduct = await Product.findById(id)
     res.render('e-commerce/products/show' , {foundproduct})
