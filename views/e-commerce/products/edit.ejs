@@ -1,0 +1,25 @@
+<%- include('../../partials/header') %>
+<form action="/products/<%= foundproduct._id %>?_method=PUT" method="POST">
+<div class="main-container container-fluid">
+    <div class="signup-form container">
+        <div class="row">
+        <div class="col-lg-12"><h1>Edit Details</h1></div>
+        
+        <div class="col-lg-12 input"><input  name="title" value="<%= foundproduct.title %> " placeholder="Title"></div>
+       <div class="col-lg-12 input"><input  name="price" value="<%= foundproduct.price %> " placeholder="price"></div>
+       <div class="col-lg-12 input"><input  name="category" value="<%= foundproduct.category %> " placeholder="category"></div>
+       <div class="col-lg-12 input"><input  name="image" value="<%= foundproduct.image %> " placeholder="Image Url"></div>
+       <div class="col-lg-12 input"><textarea  name="desc"  placeholder="description"><%= foundproduct.description %> </textarea></div>
+      
+        <div class="col-lg-12 buttons-div my-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 button my-0"><button type="submit">Update!</button></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </form>
+<%- include('../../partials/footer') %>

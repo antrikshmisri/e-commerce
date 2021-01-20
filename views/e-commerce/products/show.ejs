@@ -42,12 +42,13 @@
             </h5>
             <p class="lead my-3"><%= foundproduct.description %> </p>
           </div>
-          <div class="info-content"></div>
-          <div class="buttons">
-            <button type="button" name="button">
-              <i class="fa fa-shopping-cart"></i>Add to Cart
-            </button>
-            <button type="button" name="button">Buy Now</button>
+          <div class="product-buttons container px-0 py-0">
+            <div class="row">
+              <div class="col-lg-3"><button class="btn-primary" style="margin: 0 0;filter: none;width: 100%;"><i class="fa fa-shopping-cart"></i>Cart</button></div>
+              <div class="col-lg-3"><button class="btn-success" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-shopping-basket"></i>Buy</button></div>
+              <div class="col-lg-3"><button onclick="window.location.href ='/products/<%= foundproduct._id %>/edit'" class="btn-info" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-edit"></i>Edit</button></div>
+              <div class="col-lg-3"><button onclick="window.location.href ='/#'" class="btn-danger" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-trash-alt"></i>Delete</button></div>
+            </div>
           </div>
         </div>
       </div>

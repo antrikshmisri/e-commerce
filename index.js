@@ -1,9 +1,10 @@
 const express = require('express')
 const path = require('path')
+const methodOverride = require('method-override')
 const app = express()
 const mongoose = require('mongoose')
 const Product = require('./models/products')
-
+const bodyparser = require('body-parser')
 mongoose.connect('mongodb://localhost:27017/e-products',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -16,7 +17,8 @@ db.once("open" , ()=>{
     console.log("connection established")
 })
 
-
+app.use(bodyparser.urlencoded({ extended: false }))
+app.use(methodOverride('_method'))
 app.use(express.static(__dirname + '/public'));
 app.use('/styles', express.static(__dirname + '/public'));
 app.use('/js', express.static(__dirname + '/public'));
@@ -50,6 +52,18 @@ app.get('/products/:id' , async (req , res)=>{
     const {id} = req.params
     const foundproduct = await Product.findById(id)
     res.render('e-commerce/products/show' , {foundproduct})
+})
+
+app.get('/products/:id/edit' , async (req , res)=>{
+    const {id} = req.params
+    const foundproduct = await Product.findById(id)
+    res.render('e-commerce/products/edit' , {foundproduct})
+})
+
+app.put('/products/:id' , async (req , res)=>{
+    const {id} = req.params
+    const updatedproduct = await Product.findByIdAndUpdate(id , req.body , {runValidators: true})
+    res.redirect(`/products/${id}`)
 })
 
 const port = 5050
