@@ -16,7 +16,7 @@
       <div class="col-lg-6 mx-0 px-3 py-3">
         <div class="infos">
           <h1 class="">
-            <a href="/products/<%= foundproduct._id %>/show">
+            <a href="/products/<%= foundproduct._id %>">
               <%= foundproduct.title %>
 
             </a>
@@ -38,7 +38,7 @@
             </h5>
 
             <h5>
-              <a href="/products/<%= foundproduct._id %>/show">Product Details</a>
+              <a href="/products/<%= foundproduct._id %>">Product Details</a>
             </h5>
             <p class="lead my-3"><%= foundproduct.description %> </p>
           </div>
@@ -47,7 +47,7 @@
               <div class="col-lg-3"><button class="btn-primary" style="margin: 0 0;filter: none;width: 100%;"><i class="fa fa-shopping-cart"></i>Cart</button></div>
               <div class="col-lg-3"><button class="btn-success" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-shopping-basket"></i>Buy</button></div>
               <div class="col-lg-3"><button onclick="window.location.href ='/products/<%= foundproduct._id %>/edit'" class="btn-info" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-edit"></i>Edit</button></div>
-              <div class="col-lg-3"><button onclick="window.location.href ='/#'" class="btn-danger" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-trash-alt"></i>Delete</button></div>
+              <div class="col-lg-3"><button onclick="window.location.href ='/products/<%= foundproduct._id %>/delete'" class="btn-danger" style="margin: 0 0;filter: none;width: 100%;"><i class="fas fa-trash-alt"></i>Delete</button></div>
             </div>
           </div>
         </div>

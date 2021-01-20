@@ -66,6 +66,17 @@ app.put('/products/:id' , async (req , res)=>{
     res.redirect(`/products/${id}`)
 })
 
+app.get('/products/:id/delete' , async (req , res)=>{
+    const {id} = req.params
+    const foundproduct = await Product.findById(id)
+    res.render("e-commerce/products/delete" , {foundproduct})
+})
+app.delete('/products/:id' , async (req , res)=>{
+    const {id} = req.params
+    const product = await Product.findByIdAndDelete(id)
+    res.redirect('/products')
+})
+
 const port = 5050
 app.listen(5050 , () => {
     console.log(`Listening on Port No. ${port}`)

@@ -1,0 +1,12 @@
+<%- include('../../partials/header') %>
+<form action="/products/<%= foundproduct._id %>?_method=DELETE" method="POST">
+<div class="container-fluid main-container">
+<div class="container signup-form">
+    <div class="row">
+        <div class="col-lg-12"><h1>Delete <span class="text-danger"><%= foundproduct.title %></span> from the store?</h1></div>
+        <div class="col-lg-12"><button class="btn-danger" type="submit">Delete</button></div> 
+    </div>
+</div>
+</div>
+</form>
+<%- include('../../partials/footer') %>
