@@ -3,13 +3,17 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <h3 class="sidenav-title text-center">CATEGORIES</h3>
+  <a class="my-4" href="/products">All</a>
   <% for(cat of uniqecat){%>
-  <a class="my-4" href="#"><%= cat %> </a>
+  <a class="my-4" href="/products?category=<%= cat %>"><%= cat %> </a>
   <% } %>
 </div>
 
 <div class="menu-btn" onclick="openNav()">
   <i class="fa fa-arrow-right fa-2x"></i>
+</div>
+<div class="container text-center">
+  <h2 class="font-weight-bold mt-3"><%= `${currentcat[0].toUpperCase() + currentcat.slice(1)} Products`%> </h1>
 </div>
 <% for(let product of allproducts) {%>
 

@@ -37,6 +37,7 @@ app.get('/signin' , (req , res)=>{
 
 app.get('/products' , async (req , res)=>{
     const allproducts = await Product.find({})
+    const {category} = req.query
     let categories = await Product.find({}).select('category -_id')
     let uniqecat = []
     for(let category of categories)
@@ -44,7 +45,17 @@ app.get('/products' , async (req , res)=>{
         uniqecat.push(category.category)
     }
     uniqecat = [...new Set(uniqecat)]
-    res.render('e-commerce/products/products' , {allproducts,uniqecat})
+    if(category)
+    {
+        const filterproducts = await Product.find({category: category})
+        res.render('e-commerce/products/products' , {allproducts: filterproducts,uniqecat,currentcat: category})
+    }
+    else
+    {
+        const filterproducts = await Product.find({})
+        res.render('e-commerce/products/products' , {allproducts: filterproducts,uniqecat,currentcat: 'All'})
+    }
+    
 })
 
 
