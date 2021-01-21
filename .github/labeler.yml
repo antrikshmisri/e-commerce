@@ -3,7 +3,7 @@ model: models/*
 static: public/**/*
 seeds: seeds/*
 partial: e-commerce/views/partials/*
-ecommerce-view: e-commerce/views/e-commerce/*
-product-view: e-commerce/views/e-commerce/**/*
+ecommerce-view: views/e-commerce/*
+product-view: views/e-commerce/products/*
 docs: README.md
 dependency: package.json
