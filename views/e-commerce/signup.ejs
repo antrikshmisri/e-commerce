@@ -3,23 +3,29 @@
 <div class="main-container container-fluid">
 <div class="signup-form container">
 
-    <form id="form" action="signup.ejs" method="GET">
+    <form id="form" action="/thank" onsubmit="return validation();" >
       <div class="row">
       <div class="col-lg-12"><h1>SIGN UP</h1></div>
       <div class="col-lg-12 input">
         <!-- <label for="email">Email</label> -->
-        <input type="Email" name="Email" id="Email" type = "Email" value="" placeholder="Enter Your Email" required>
+        <input type="Email" name="Email" id="Email" type = "Email" value="" placeholder="Enter Your Email" >
+        <br>
+        <span id="useremail" class="text-danger font-weight-bold"></span>
       </div>
       <!-- <div class="col-lg-12 input"></div> -->
       <div class="col-lg-12 input">
         <!-- <label for="password">Password</label> -->
-        <input type="password" name="password" id="password" type = "password" value="" placeholder="Enter Your Password" required>
+        <input type="password" name="password" id="password" type = "password" value="" placeholder="Enter Your Password" >
+        <br>
+        <span id="userpassword" class="text-danger font-weight-bold"></span>
       </div>
 
     <!-- <div class="col-lg-12 input"><input type="password" name="" value="" placeholder="Enter Your password"></div> -->
     <div class="col-lg-12 input">
       <!-- <label for="password">Re-Enter Password</label> -->
-      <input type="password" name="cpassword" id="cpassword"  type = "password" value="" placeholder="Re-Enter Your Password" required >
+      <input type="password" name="cpassword" id="cpassword"  type = "password" value="" placeholder="Re-Enter Your Password">
+      <br>
+      <span id="confirmpass" class="text-danger font-weight-bold"></span>
     </div>
       <!-- <div class="col-lg-12 input"><input type="password" name="" value="" placeholder="Re-Enter Your password"></div> -->
       <div class="col-lg-12"><p><span><input type="checkbox" name="" value="" required></span>I agree to the terms of services</p></div>
@@ -43,5 +49,5 @@
 
 
 
-<<script src="/js/form.js" charset="utf-8"></script>>
+<script src="/js/form.js" charset="utf-8"></script>
 <%- include('../partials/footer') %>
