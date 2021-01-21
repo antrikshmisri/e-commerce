@@ -13,7 +13,7 @@
   <i class="fa fa-arrow-right fa-2x"></i>
 </div>
 <div class="container text-center">
-  <h2 class="font-weight-bold mt-3"><%= `${currentcat[0].toUpperCase() + currentcat.slice(1)} Products`%> </h1>
+  <h2 class="font-weight-bold mt-3" style="color: #343f3e;"><%= `${currentcat[0].toUpperCase() + currentcat.slice(1)} Products`%> </h1>
 </div>
 <% for(let product of allproducts) {%>
 
@@ -54,11 +54,14 @@
               </h5>
             </div>
             <div class="info-content"></div>
-            <div class="buttons">
-              <button type="button" name="button">
-                <i class="fa fa-shopping-cart"></i>Add to Cart
-              </button>
-              <button type="button" name="button">Buy Now</button>
+            <div class="buttons container">
+              <div class="row">
+                <div class="col-md-6"><button type="button" name="button">
+                <i class="fa fa-shopping-cart"></i>Cart
+              </button></div>
+                <div class="col-md-6"><button type="button" name="button"><i class="fas fa-shopping-basket"></i>Buy</button></div>
+              
+            </div>
             </div>
           </div>
         </div>

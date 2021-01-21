@@ -145,31 +145,10 @@ textarea
   transform: rotateZ(360deg);
 }
 
-.filter-section
-{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-a.filters
-{
-    text-align: center;
-    padding: 5px 10px;
-    background-color: #343f3e;
-    color: #dcedff;
-    border-radius: 15px;
-    margin: 0 1rem !important; 
-}
-a.filters:hover
-{
-  color: #dcedff;
-  background-color: #94b0da;
-}
 
 .card-container {
-  height: 80vh;
+  min-height: 90vh;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -213,12 +192,16 @@ a.filters:hover
   color: #343f3e;
   width: 100%;
 }
+.card .infos h1
+{
+  font-weight: 700;
+}
 .card .infos .buttons {
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .card .infos .product-buttons
 {
@@ -407,7 +390,7 @@ button i
   color: #dcedff;
   font-size: 14px;
   width: 100%;
-  min-height: 30vh;
+  min-height: 30%;
   padding-bottom: 0 !important;
 }
 .footer .row

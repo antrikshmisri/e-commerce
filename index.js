@@ -45,6 +45,7 @@ app.get('/products' , async (req , res)=>{
         uniqecat.push(category.category)
     }
     uniqecat = [...new Set(uniqecat)]
+    console.log(uniqecat)
     if(category)
     {
         const filterproducts = await Product.find({category: category})

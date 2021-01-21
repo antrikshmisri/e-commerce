@@ -14,6 +14,7 @@ db.once("open" , ()=>{
 })
 async function getProducts()
 {
+    await Product.deleteMany({})
     let productData = await axios.get('https://fakestoreapi.com/products')
     productsarr = productData.data
     return productsarr
