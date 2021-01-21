@@ -4,6 +4,6 @@ static: public/**/*
 seeds: seeds/*
 partial: e-commerce/views/partials/*
 ecommerce-view: views/e-commerce/*
-product-view: views/e-commerce/**/*
+product-view: views/e-commerce/products/*
 docs: README.md
 dependency: package.json
