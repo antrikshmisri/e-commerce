@@ -1,0 +1,9 @@
+server: index.js
+model: models/*
+static: public/**/*
+seeds: seeds/*
+partial: e-commerce/views/partials/*
+ecommerce-view: e-commerce/views/e-commerce/*
+product-view: e-commerce/views/e-commerce/**/*
+docs: README.md
+dependency: package.json
