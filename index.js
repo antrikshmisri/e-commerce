@@ -4,6 +4,7 @@ const methodOverride = require('method-override')
 const app = express()
 const mongoose = require('mongoose')
 const Product = require('./models/products')
+
 const bodyparser = require('body-parser')
 mongoose.connect('mongodb://localhost:27017/e-products',{
     useNewUrlParser: true,
@@ -34,7 +35,9 @@ app.get('/signup' , (req , res)=>{
 app.get('/signin' , (req , res)=>{
     res.render('e-commerce/signin')
 })
-
+app.get('/thank' , (req , res)=>{
+    res.render('e-commerce/thank')
+})
 app.get('/products' , async (req , res)=>{
     const allproducts = await Product.find({})
     const {category} = req.query
@@ -56,7 +59,7 @@ app.get('/products' , async (req , res)=>{
         const filterproducts = await Product.find({})
         res.render('e-commerce/products/products' , {allproducts: filterproducts,uniqecat,currentcat: 'All'})
     }
-    
+
 })
 
 
@@ -93,4 +96,3 @@ const port = 5050
 app.listen(5050 , () => {
     console.log(`Listening on Port No. ${port}`)
 })
-
