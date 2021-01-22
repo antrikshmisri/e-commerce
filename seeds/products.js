@@ -39,10 +39,9 @@ getProducts()
             console.log(err)
         })
     }
-    db.close()
+    // db.close()
 })
 .catch(err => {
     console.log(err)
-    db.close()
+    // db.close()
 })
-

@@ -16,7 +16,24 @@ textarea
   border-radius: 10px;
   padding: 0.5rem 1rem;
 }
+#testimonials{
 
+
+  background-color: #94b0da;
+  color:#343f3e;
+  margin-bottom: 50px;
+}
+.testimonial-text{
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.testimonial-image{
+
+  width: 10%;
+  border-radius:  100%;
+  margin-left:   500px;
+}
 .navbar
 {
   display: flex;
