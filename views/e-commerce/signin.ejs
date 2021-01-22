@@ -1,11 +1,15 @@
 <%- include('../partials/header') %>
-
+<form action="/home" method="GET">
 <div class="main-container container-fluid">
 <div class="signup-form container">
     <div class="row">
     <div class="col-lg-12"><h1>SIGN IN</h1></div>
-    <div class="col-lg-12 input"><input type="Email" name="" value="" placeholder="Enter Your Email"></div>
-   <div class="col-lg-12 input"><input type="password" name="" value="" placeholder="Enter Your password"></div>
+    <div class="col-lg-12 input"><input required type="Email" name=""  placeholder="Enter Your Email"></div>
+   <div class="col-lg-12 input">
+       <input required type="password" name="" value="" oninput="validatePass(this)" placeholder="Enter Your password">
+       <br>
+        <span id="userpassword" class="text-danger font-weight-bold"></span> 
+    </div>
   
     <div class="col-lg-12"><p><span><input type="checkbox" name="" value=""></span>I agree to the terms of services</p></div>
     <div class="col-lg-12 buttons-div my-0">
@@ -18,8 +22,8 @@
     </div>
 </div>
 </div>
+</form>
 
 
-
-
+<script src="/js/form.js"></script>
 <%- include('../partials/footer') %>

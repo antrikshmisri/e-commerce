@@ -4,27 +4,27 @@
 <div class="signup-form container">
 
 
-    <form id="form" action="/thank" onsubmit="return validation();" >
+    <form id="form" action="/thank" onsubmit="validation();" >
       <div class="row">
       <div class="col-lg-12"><h1>SIGN UP</h1></div>
       <div class="col-lg-12 input">
         <!-- <label for="email">Email</label> -->
-        <input type="Email" name="Email" id="Email" type = "Email" value="" placeholder="Enter Your Email" >
+        <input required type="Email" name="Email" id="Email" type = "Email" value="" placeholder="Enter Your Email" >
         <br>
-        <span id="useremail" class="text-danger font-weight-bold"></span>
+        <span id="useremail" class="text-danger font-weight-bold"></span> 
       </div>
       <div class="col-lg-12 input">
 
         <!-- <label for="password">Password</label> -->
-        <input type="password" name="password" id="password" type = "password" value="" placeholder="Enter Your Password" >
+        <input required oninput="validatePass(this)" type="password" name="password" id="password" type = "password" value="" placeholder="Enter Your Password" >
         <br>
-        <span id="userpassword" class="text-danger font-weight-bold"></span>
+        <span id="userpassword" class="text-danger font-weight-bold"></span> 
       </div>
 
     <div class="col-lg-12 input">
 
       <!-- <label for="password">Re-Enter Password</label> -->
-      <input type="password" name="cpassword" id="cpassword"  type = "password" value="" placeholder="Re-Enter Your Password">
+      <input required oninput="validatecPass(this)" type="password" name="cpassword" id="cpassword"  type = "password" value="" placeholder="Re-Enter Your Password">
       <br>
       <span id="confirmpass" class="text-danger font-weight-bold"></span>
 
