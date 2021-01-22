@@ -26,8 +26,8 @@
             <img
               loading="lazy"
               class="img-fluid"
-              src=<%= product.image %> 
-              alt=<%= product.title %> 
+              src=<%= product.image %>
+              alt=<%= product.title %>
             />
           </div>
         </div>
@@ -60,7 +60,7 @@
                 <i class="fa fa-shopping-cart"></i>Cart
               </button></div>
                 <div class="col-md-6"><button type="button" name="button"><i class="fas fa-shopping-basket"></i>Buy</button></div>
-              
+
             </div>
             </div>
           </div>
@@ -70,4 +70,34 @@
   </div>
 </div>
 
-<% } %> <%- include('../../partials/footer') %>
+<% } %>
+<section class="colored-section" id="testimonials">
+  <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active container-fluid">
+        <h3 class="testimonial-text">I like it, products here are affordable and also good</h3>
+        <img class="testimonial-image" src="https://thumbs.dreamstime.com/b/barber-salon-barbershop-hairdresser-skin-care-routine-fashion-model-cool-man-stylish-man-ultimate-bad-boy-barber-salon-barbershop-182774611.jpg" alt="lady-profile">
+        <em>Beverly, Illinois</em>
+      </div>
+      <div class="carousel-item container-fluid">
+        <h2 class="testimonial-text">A great website to get best deals on best products.Looking forward to buy many more things</h2>
+        <img class="testimonial-image" src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="dog-profile">
+        <em>Pebbles, New York</em>
+
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+</section>
+ <%- include('../../partials/footer') %>
