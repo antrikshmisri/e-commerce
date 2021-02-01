@@ -2,6 +2,7 @@
 function openNav() {
       document.getElementById("mySidenav").style.transform = "translateX(0%)";
       document.querySelector('.menu-btn').style.left = 'calc(100% - 1em - 50px - 1em)'
+      document.querySelector('.add-post').style.top = '40%'
       document.querySelector('.menu-btn').style.transform = 'rotateZ(540deg)'
   }
   
@@ -9,6 +10,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.transform = "translateX(-100%)";
     document.querySelector('.menu-btn').style.left = '0%'
+    document.querySelector('.add-post').style.top = '50%'
     document.querySelector('.menu-btn').style.transform = 'rotateZ(0deg)'
 
   }

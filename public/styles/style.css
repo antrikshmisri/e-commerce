@@ -20,7 +20,7 @@ textarea
 
   background-color: #94b0da;
   color:#343f3e;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   min-height: 200px;
 }
 
@@ -185,16 +185,16 @@ textarea
   transform: rotateZ(360deg);
 }
 
-
-
 .card-container {
   min-height: 90vh;
+  margin-bottom: 5rem;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
+
 
 .card {
   background-color: #94b0da;
