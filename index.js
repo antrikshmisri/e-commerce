@@ -62,7 +62,21 @@ app.get('/products' , async (req , res)=>{
 
 })
 
+app.get('/products/new' , (req , res)=>{
+    res.render('e-commerce/products/new')
+})
 
+app.post('/products' , async(req , res)=>{
+    const newproduct = new Product(req.body)
+    await newproduct.save()
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err =>{
+        console.log(err)
+    })
+    res.redirect('/products')
+})
 app.get('/products/:id' , async (req , res)=>{
     const {id} = req.params
     const foundproduct = await Product.findById(id)
